@@ -24,7 +24,11 @@ Users should be able to:
 - Navigate the slider using either their mouse/trackpad or keyboard
 
 ### Screenshot
+### DESKTOP
+![_D__GR_desarrollo%20web_Practicas_FRONTENDMENTOR_room-homepage-master_index html](https://user-images.githubusercontent.com/71336562/153756761-3737d8ce-5c6b-4a84-a16b-a918f8c6f38c.png)
 
+### MOBILE
+![_D__GR_desarrollo%20web_Practicas_FRONTENDMENTOR_room-homepage-master_index html (1)](https://user-images.githubusercontent.com/71336562/153756760-61218361-21fe-4447-bd44-67089e61e89a.png)
 
 ### Links
 
