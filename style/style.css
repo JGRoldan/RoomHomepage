@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+:root{
+    --darkGray:rgb(109, 109, 109);
+    --black: rgb(0, 0, 0);
+    --white: rgb(255, 255, 255);
+    --veryDarkGray: rgb(71, 71, 71);
+    --font:'Spartan', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container header{
+    position: absolute;
+    top:0;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    color:var(--white);
+    margin: 2rem 0 0 2rem;
+    z-index: 1;
+}
+    .container header ul{
+        display: flex;
+        list-style: none;
+        margin-left: 2rem;
+    }
+    .container header ul li{
+        padding: 2rem;
+        cursor: pointer;
+
+        position:relative;
+    }
+    .container header ul li::after{
+        position: absolute;
+        content: '';
+        bottom:30%;
+        left:40%;
+        width: 0;
+        height: 2px;
+        background: var(--white);
+        transition: width .5s ease;
+    }
+    .container header ul li:hover:after{
+        width: 20%;
+    }
+.slider{
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    }
+    .slider .slide{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+        .slider .slide .img-1,
+        .slider .slide .img-2,
+        .slider .slide .img-3{
+            width: 60%;
+        }
+        .slider .slide .img-1 img,
+        .slider .slide .img-2 img,
+        .slider .slide .img-3 img{
+            width: 100%;
+        }
+        .slider .slide .text{
+            width: 40%;
+           padding-left: 5rem;
+        }
+        .slider .slide .text h2{
+            font-family: var(--font);
+            font-size: 2rem;
+        }
+        .slider .slide .text p{
+            font-family: var(--font);
+            color: var(--darkGray);
+            font-size: .9rem;
+            padding: 1rem 0 2rem 0;
+            line-height: 1.5rem;
+        }
+        .slider .slide .text a{
+            text-decoration: none;
+            font-family: var(--font);
+            color: var(--black);
+            letter-spacing: .5rem;
+            transition: .5s ease;
+        }
+        .slider .slide div a:hover{
+            color:var(--darkGray)
+        }
+
+.container .button{
+    display: flex;
+    position: absolute;
+    bottom:37%;
+    right:24%;
+    transform: translate(-66%,-63%);
+    z-index: 100;
+}
+    .container .button button{
+        border: none;
+        color:var(--white);
+        background:var(--black);
+        font-size: 3rem;
+        width: 80px;
+        cursor: pointer;
+        transition: .5s ease;
+    }
+    .container .button button:hover{
+        background: var(--darkGray);
+    }
+
+.container .about{
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+    .container .about .img{
+        flex-grow: 1;
+        width: 100%;
+    }
+    .container .about .img img{
+        width: 100%;
+        height: 100%;
+    }
+    .container .about .aboutText{
+        
+        flex-grow: 2;
+        margin: 5rem;
+    }
+    .container .about .aboutText h3{
+        color: var(--black);
+        font-family: var(--font);
+        font-size: 1.5rem;
+    }
+    .container .about .aboutText p{
+        font-family: var(--font);
+        color: var(--darkGray);
+        font-size: .9rem;
+        line-height: 1.5rem;
+        padding-top: .5rem;
+    }
+
+    @media screen and (max-width:600px){
+        .container{
+            height: auto;
+            overflow: hidden;
+        }
+        .container header ul{
+            margin-left: 1rem;
+        }
+        .container header ul li{
+            padding: 1rem;
+            font-size: .8rem;
+        }
+        .slider{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .slider .slide{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .slider .slide .img-1,
+        .slider .slide .img-2,
+        .slider .slide .img-3{
+            width: 100%;
+            height: 100%;
+        }
+        .slider .slide .img-1 img,
+        .slider .slide .img-2 img,
+        .slider .slide .img-3 img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slider .slide .img-1 img{
+            content: url('../images/mobile-image-hero-1.jpg');
+        }
+        .slider .slide .img-2 img{
+            content: url('../images/mobile-image-hero-2.jpg');
+        }
+        .slider .slide .img-3 img{
+            content: url('../images/mobile-image-hero-3.jpg');
+        }
+        .slider .slide .text{
+            width: 80%;
+            padding: .5rem;
+            margin: 4rem 0 3rem 0;
+        }
+        .container .button{
+            bottom:30%;
+            right:-19%;
+            transform: translate(-56%,-72%);
+        }
+        .container .about{
+            display: flex;
+            width: 100%;
+            line-break: loose;
+            height: auto;
+            flex-direction: column;
+        }
+        .container .about .aboutText{
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            margin: 0rem;
+            text-align: center;
+            margin: 3rem 0 3rem 0;
+        }
+        .container .about .aboutText p{
+            font-size: .8rem;
+        }
+    }
